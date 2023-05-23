@@ -15,34 +15,62 @@ body {
 .parent-container {
     display: flex;
     flex-direction: row;
-    width: 50vw;
-    height: 60vh;
+    border-radius: 8px;
+    width: 40vw;
+    height: 52vh;
     background-color: hsl(0, 0%, 100%);
 }
 
 .desktop-image {
-    height: 60vh;
-    width: 25vw;
+    height: 52vh;
+    width:  25vw;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.mobile-image {
+    display: none;
 }
 
 .content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
     margin-top: 4vh;
-    margin-left: 3vw;
+    margin-left: 1.8vw;
 }
 
 .perfume {
     font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
     font-weight: 500;
     color: hsl(228, 12%, 48%);
     letter-spacing: 0.3rem;
 }
 
-h1 {
-    font-size: 4rem;
+.content-container h1 {
+    font-size: 1.9rem;
+    line-height: 1;
+    font-family: 'Fraunces', serif;
+    width: 14vw;
 }
 
-p {
+.content-container p {
+    margin-top: 1vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
     font-size: 0.875em;
+    width: 17vw;
+    line-height: 1.6em;
+}
+
+.price-container{
+    margin-right: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
 }
 
 .price {
@@ -51,7 +79,95 @@ p {
     font-size: 2rem;
 }
 
+.price-discount {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    font-size: 0.8rem;
+    margin-top: 1.5vh;
+
+}
+
 button {
-    width: 20vw;
-    height: 8vh
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    gap: 0.5vw;
+    align-items: center;
+    width: 16vw;
+    height: 5.5vh;
+    background-color: hsl(158, 36%, 37%);
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: hsla(157, 43%, 18%, 1);
+    transition: ease-in-out 0.3s;
+}
+
+button img {
+    width: 1vw;
+    height: 2vh;
+}
+
+@media screen and (max-width: 375px) {
+    .parent-container {
+        flex-direction: column;
+        width: 90vw;
+        height: 77vh;
+    }
+
+    .mobile-image {
+        width: 90vw;
+        height: 70vh;
+    }
+
+    .content-container {
+        margin-left: 8vw;
+        padding-bottom: 2vh;
+    }
+
+    .content-container h1 {
+        font-size: 1.8rem;
+        width: 80vw;
+    }
+
+    .content-container p {
+        width: 80vw;
+    }
+
+
+    .desktop-image {
+        display: none;
+    }
+
+    .mobile-image {
+        display: block;
+        width: 90vw;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+
+    .price-container {
+        margin-right: 30vw;
+    }
+
+    .price-discount {
+        margin-left: 4vw;
+    }
+
+    
+    button {
+        width: 75vw;
+    }
+
+    button img {
+    width: 6vw;
+    height: 2.5vh;
+    margin-right: 2vh;
+    }
 }
