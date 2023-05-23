@@ -17,12 +17,12 @@ body {
     flex-direction: row;
     border-radius: 8px;
     width: 40vw;
-    height: 55vh;
+    height: 58vh;
     background-color: hsl(0, 0%, 100%);
 }
 
 .desktop-image {
-    height: 57vh;
+    height: 60vh;
     width:  25vw;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
