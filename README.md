@@ -18,6 +18,7 @@ My solution for the Product preview card component on Frontendmentor.io, This we
 ## My Process and tools:
 
 - Desktop first workflow
+- Semantic HTML5 markup
 - Flexbox
 - Responsive design
 - No libraries were used, just straight HTML/CSS
