@@ -4,12 +4,12 @@ My solution for the Product preview card component on Frontendmentor.io, This we
 
 ## Screenshots
 
-### Desktop
+### Desktop - 1440 width
 ![image](https://github.com/ForbiddenShadow/product-preview-card-component/assets/9211143/9fc16f14-412a-45f0-b709-b8acd0855fa3)
 
 
 
-### Mobile
+### Mobile - 375 width
 ![image](https://github.com/ForbiddenShadow/product-preview-card-component/assets/9211143/1a0c08c5-98aa-4395-9645-84ae1633ca54)
 
 
