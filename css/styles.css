@@ -1,174 +1,174 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+/* Font Imports 
+    Monserrat - Weights: 500, 700
+    Fraunces - Weights: 700 */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+/* Color Variables */
+
+:root {
+  --primary-cream: hsl(30, 38%, 92%);
+  --primary-cyan: hsl(158, 36%, 37%);
+  --dark-cyan: #1a4031;
+
+  --dark-blue: hsl(212, 21%, 14%);
+  --greyish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* CSS Reset */
 
 * {
-    margin: 0;
-    padding: 0;
+  padding: 0;
+  margin: 0;
 }
+
+/* Body styles for background color and centering */
 
 body {
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    background-color: hsl(30, 38%, 92%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-cream);
 }
 
-.parent-container {
-    display: flex;
-    flex-direction: row;
-    border-radius: 8px;
-    width: 40vw;
-    height: 58vh;
-    background-color: hsl(0, 0%, 100%);
+/* Styles for img responsiveness */
+
+img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .desktop-image {
-    height: 58vh;
-    width:  25vw;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+  display: none;
 }
 
-.mobile-image {
-    display: none;
+/* Main parent container styles */
+
+.container {
+  max-width: 90%;
+  border-radius: 10px;
+  background-color: var(--white);
 }
+
+/* Product info container */
 
 .content-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-    margin-top: 4vh;
-    margin-left: 1.8vw;
-    padding-right: 15vw;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.perfume {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: hsl(228, 12%, 48%);
-    letter-spacing: 0.3rem;
+/* Perfume typography styles */
+.content-container__perfume {
+  font-size: 0.7rem;
+  letter-spacing: 0.3rem;
 }
 
-.content-container h1 {
-    font-size: 1.9rem;
-    line-height: 1;
-    font-family: 'Fraunces', serif;
-    width: 14vw;
+/* Product header styles */
+.content-container__header {
+  font-family: "Fraunces", serif;
+  font-size: 1.8rem;
+  color: var(--dark-blue);
 }
 
-.content-container p {
-    margin-top: 1vh;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    color: hsl(228, 12%, 48%);
-    font-size: 0.875em;
-    width: 17vw;
-    line-height: 1.6em;
+/* Main product paragraph styles */
+.content-container__maintext {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  color: var(--greyish-blue);
 }
 
-.price-container{
-    margin-right: 2vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
+/* Price container */
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.price {
-    font-family: 'Fraunces', serif;
-    color: hsl(158, 36%, 37%);
-    font-size: 2rem;
+/* current price styles */
+.price_container__main {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: var(--primary-cyan);
 }
 
-.price-discount {
-    color: hsl(228, 12%, 48%);
-    text-decoration: line-through;
-    font-size: 0.8rem;
-    margin-top: 1.5vh;
-
+/* original price styles */
+.price_container__secondary {
+  font-size: 0.8rem;
+  text-decoration: line-through;
+  color: var(--greyish-blue);
 }
 
-button {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 0.9rem;
-    font-weight: 700;
-    gap: 0.5vw;
-    align-items: center;
-    width: 16vw;
-    height: 5.5vh;
-    background-color: hsl(158, 36%, 37%);
-    text-align: center;
-    color: white;
-    border: none;
-    border-radius: 8px;
+/* Button style */
+
+.btn {
+  margin-top: 1rem;
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: center;
+  gap: 3%;
+  border-radius: 10px;
+  border-style: none;
+  background-color: var(--primary-cyan);
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  transition: 0.8s;
 }
 
-button:hover {
-    background-color: hsla(157, 43%, 18%, 1);
-    transition: ease-in-out 0.3s;
+.btn:hover {
+  background-color: var(--dark-cyan);
 }
 
-button img {
-    width: 1vw;
-    height: 2vh;
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 10px;
+  }
+
+  .desktop-image {
+    display: block;
+  }
+
+  .mobile-image {
+    display: none;
+  }
+
+  img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: unset;
+    border-bottom-left-radius: 10px;
+  }
 }
 
-@media screen and (max-width: 375px) {
-    .parent-container {
-        flex-direction: column;
-        width: 90vw;
-        height: 77vh;
-    }
+/* Large tablet */
 
-    .mobile-image {
-        width: 90vw;
-        height: 70vh;
-    }
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 56%;
+  }
+}
 
-    .content-container {
-        margin-left: 8vw;
-        padding-bottom: 2vh;
-    }
+/* Laptop */
 
-    .content-container h1 {
-        font-size: 1.8rem;
-        width: 80vw;
-    }
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 40%;
+  }
+}
 
-    .content-container p {
-        width: 80vw;
-    }
-
-
-    .desktop-image {
-        display: none;
-    }
-
-    .mobile-image {
-        display: block;
-        width: 90vw;
-        border-top-right-radius: 8px;
-        border-top-left-radius: 8px;
-    }
-
-    .price-container {
-        margin-right: 30vw;
-    }
-
-    .price-discount {
-        margin-left: 4vw;
-    }
-
-    
-    button {
-        width: 75vw;
-    }
-
-    button img {
-    width: 6vw;
-    height: 2.5vh;
-    margin-right: 2vh;
-    }
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 30%;
+  }
 }
